@@ -2,10 +2,6 @@
     <img alt="DevRadar" title="#devradar" src=".github/devradar.svg" width="200px" />
 </h1>
 
-<h4 align="center">
-  
-</h4>
-
 <p align="center">
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
