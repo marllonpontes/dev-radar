@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Image, View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Image, View, Text, TextInput, TouchableOpacity, Keyboard } from 'react-native';
 import MapView, { Marker, Callout } from 'react-native-maps';
 import { requestPermissionsAsync, getCurrentPositionAsync } from 'expo-location';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -64,6 +64,7 @@ function Main({ navigation }) {
 
     setDevs(response.data.devs);
     setupWebsocket();
+    Keyboard.dismiss();
   }
 
   function handleRegionChanged(region) {
@@ -114,6 +115,8 @@ function Main({ navigation }) {
         autoCorrect={false}
         value={techs}
         onChangeText={setTechs}
+        returnKeyType="send"
+        onSubmitEditing={loadDevs}
         />
 
         <TouchableOpacity onPress={loadDevs} style={styles.loadButton}>
